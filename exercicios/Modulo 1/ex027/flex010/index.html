@@ -8,6 +8,7 @@
         #container{
             background-color: aqua;
             display: flex;
+            flex-flow: row nowrap;
         }
 
         .itens{
@@ -15,16 +16,30 @@
             border: 1px solid black;
             flex: auto;
             text-align: center;
+            flex-basis: 200px;
+        }
+
+        div#cx1{
+            flex-shrink: 1;
+            flex-grow: 0;
+        }
+
+        div#cx2{
+            flex-shrink: 0;
+            flex-grow: 2;
+        }
+
+        div#cx3{
+            flex-shrink: 2;
+            flex-grow: 1;
         }
     </style>
 </head>
 <body>
     <div id="container">
-        <div class="itens">A</div>
-        <div class="itens">B</div>
-        <div class="itens">C</div>
-        <div class="itens">D</div>
-        <div class="itens">E</div>
+        <div class="itens" id="cx1">A</div>
+        <div class="itens" id="cx2">B</div>
+        <div class="itens" id="cx3">C</div>
     </div>
     
 </body>
